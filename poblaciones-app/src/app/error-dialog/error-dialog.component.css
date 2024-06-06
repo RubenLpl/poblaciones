@@ -1,0 +1,14 @@
+/* Estilos personalizados para el diálogo */
+.mat-dialog-content {
+  padding: 20px;
+}
+
+.mat-dialog-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}

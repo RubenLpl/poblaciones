@@ -1,0 +1,14 @@
+<div *ngIf="loading" class="spinner-container">
+  <mat-spinner></mat-spinner>
+</div>
+<div *ngIf="!loading" class="content-container">
+  <form [formGroup]="filterForm" class="filter-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Filtro de población</mat-label>
+      <input matInput type="number" formControlName="filterValue">
+    </mat-form-field>
+  </form>
+  <div class="chart-container">
+    <canvas id="continentChart"></canvas>
+  </div>
+</div>

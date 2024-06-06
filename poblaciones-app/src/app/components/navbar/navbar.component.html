@@ -1,0 +1,24 @@
+<mat-sidenav-container class="sidenav-container" [class.sidenav-open]="sidenav.opened">
+  <mat-sidenav #sidenav mode="side" class="sidenav" fixedInViewport>
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" routerLinkActive="active-link">Global View</a>
+      <a mat-list-item routerLink="/continent/Africa" routerLinkActive="active-link">Africa</a>
+      <a mat-list-item routerLink="/continent/Asia" routerLinkActive="active-link">Asia</a>
+      <a mat-list-item routerLink="/continent/Europe" routerLinkActive="active-link">Europe</a>
+      <a mat-list-item routerLink="/continent/Oceania" routerLinkActive="active-link">Oceania</a>
+      <a mat-list-item routerLink="/continent/Americas" routerLinkActive="active-link">Americas</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Aplicación de población</span>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
